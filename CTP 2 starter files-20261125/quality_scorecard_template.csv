@@ -1,7 +1,0 @@
-dimension,rule_in_plain_words,column,how_you_measured_it,failing_rows,total_rows,score_pct,severity_high_medium_low,who_should_fix_owner_steward_custodian
-Completeness,email is filled,email,,,,,,
-Uniqueness,customer_id is unique,customer_id,,,,,,
-Validity,,,,,,,,
-Consistency,,,,,,,,
-Accuracy,,,,,,,,
-Timeliness,,,,,,,,
