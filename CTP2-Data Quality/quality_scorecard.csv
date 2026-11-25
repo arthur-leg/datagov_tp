@@ -1,0 +1,11 @@
+dimension,rule_in_plain_words,column,how_you_measured_it,failing_rows,total_rows,score_pct,severity_high_medium_low,who_should_fix_owner_steward_custodian
+Completeness,email is filled,email,empty or blank values,48,1241,96.13,medium,Owner
+Completeness,birth_date is filled,birth_date,empty or blank values,0,1241,100.0,low,Steward
+Uniqueness,customer_id is unique,customer_id,extra rows with an already seen customer_id,8,1241,99.36,high,Custodian
+Uniqueness,one account per person,email,extra rows with same strip+lower email (non empty),60,1241,95.17,medium,Steward
+Validity,email looks like an email,email,"non-empty not matching ^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$",19,1241,98.47,medium,Owner
+Validity,loyalty_tier in bronze/silver/gold/platinum,loyalty_tier,non-empty values outside the 4 tiers,12,1241,99.03,low,Steward
+Validity,French postal code has 5 digits,postal_code,FR rows whose postal code is not 5 digits,48,1241,96.13,medium,Custodian
+Consistency,country is an ISO-2 code,country,"values not in {FR, DE, ES, BE}",336,1241,72.93,medium,Custodian
+Consistency,signup_date is YYYY-MM-DD,signup_date,values not matching ^\d{4}-\d{2}-\d{2}$,303,1241,75.58,low,Custodian
+Accuracy,birth_date between 1906 and today-18y,birth_date,ISO dates outside the range,8,1241,99.36,high,Owner
